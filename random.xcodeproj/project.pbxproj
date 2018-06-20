@@ -13,9 +13,15 @@
 		4448684220C388320030BE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448684020C388320030BE26 /* LaunchScreen.storyboard */; };
 		4448684520C388320030BE26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448684420C388320030BE26 /* main.m */; };
 		4448684D20C38CF30030BE26 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448684C20C38CF30030BE26 /* NowPlayingViewController.m */; };
+		4448685A20C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448685920C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m */; };
+		4448688220DA74D50030BE26 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688120DA74D50030BE26 /* DetailViewController.m */; };
+		4448688820DA7F410030BE26 /* MoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688720DA7F410030BE26 /* MoviesCollectionViewController.m */; };
+		4448688B20DA809B0030BE26 /* MoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */; };
+		BBFDB3426622BB868C69D9FB /* libPods-random.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DF464673AD1676B0B93998 /* libPods-random.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31725DABFCA8F0538D0DBED5 /* Pods-random.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random.debug.xcconfig"; path = "Pods/Target Support Files/Pods-random/Pods-random.debug.xcconfig"; sourceTree = "<group>"; };
 		4448683220C388310030BE26 /* random.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = random.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4448683520C388310030BE26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4448683620C388310030BE26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +32,16 @@
 		4448684420C388320030BE26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4448684B20C38CF30030BE26 /* NowPlayingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
 		4448684C20C38CF30030BE26 /* NowPlayingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NowPlayingViewController.m; sourceTree = "<group>"; };
+		4448685820C3DFC70030BE26 /* NowPlayingMovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NowPlayingMovieTableViewCell.h; sourceTree = "<group>"; };
+		4448685920C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NowPlayingMovieTableViewCell.m; sourceTree = "<group>"; };
+		4448688020DA74D50030BE26 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4448688120DA74D50030BE26 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4448688620DA7F410030BE26 /* MoviesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesCollectionViewController.h; sourceTree = "<group>"; };
+		4448688720DA7F410030BE26 /* MoviesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewController.m; sourceTree = "<group>"; };
+		4448688920DA809B0030BE26 /* MoviesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesCollectionViewCell.h; sourceTree = "<group>"; };
+		4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewCell.m; sourceTree = "<group>"; };
+		B3F939F922C556165CC77479 /* Pods-random.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random.release.xcconfig"; path = "Pods/Target Support Files/Pods-random/Pods-random.release.xcconfig"; sourceTree = "<group>"; };
+		D6DF464673AD1676B0B93998 /* libPods-random.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-random.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFDB3426622BB868C69D9FB /* libPods-random.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,8 @@
 			children = (
 				4448683420C388310030BE26 /* random */,
 				4448683320C388310030BE26 /* Products */,
+				C5E8B207E9B1041C5DCF4113 /* Pods */,
+				9E5B47865892772DB7A12BDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,7 @@
 		4448683420C388310030BE26 /* random */ = {
 			isa = PBXGroup;
 			children = (
+				4448684F20C3B6210030BE26 /* ViewCells */,
 				4448684E20C38D210030BE26 /* ViewControllers */,
 				4448683520C388310030BE26 /* AppDelegate.h */,
 				4448683620C388310030BE26 /* AppDelegate.m */,
@@ -75,8 +95,40 @@
 			children = (
 				4448684C20C38CF30030BE26 /* NowPlayingViewController.m */,
 				4448684B20C38CF30030BE26 /* NowPlayingViewController.h */,
+				4448688020DA74D50030BE26 /* DetailViewController.h */,
+				4448688120DA74D50030BE26 /* DetailViewController.m */,
+				4448688620DA7F410030BE26 /* MoviesCollectionViewController.h */,
+				4448688720DA7F410030BE26 /* MoviesCollectionViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4448684F20C3B6210030BE26 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4448685820C3DFC70030BE26 /* NowPlayingMovieTableViewCell.h */,
+				4448685920C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m */,
+				4448688920DA809B0030BE26 /* MoviesCollectionViewCell.h */,
+				4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		9E5B47865892772DB7A12BDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6DF464673AD1676B0B93998 /* libPods-random.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5E8B207E9B1041C5DCF4113 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31725DABFCA8F0538D0DBED5 /* Pods-random.debug.xcconfig */,
+				B3F939F922C556165CC77479 /* Pods-random.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4448684820C388320030BE26 /* Build configuration list for PBXNativeTarget "random" */;
 			buildPhases = (
+				8A2D738DDFF70FDE2BD6606B /* [CP] Check Pods Manifest.lock */,
 				4448682E20C388310030BE26 /* Sources */,
 				4448682F20C388310030BE26 /* Frameworks */,
 				4448683020C388310030BE26 /* Resources */,
+				A7064489FD91CE3EE3CE3B9D /* [CP] Embed Pods Frameworks */,
+				C38C61351DC5B7004EE49B0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,11 +199,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A2D738DDFF70FDE2BD6606B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-random-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7064489FD91CE3EE3CE3B9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-random/Pods-random-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38C61351DC5B7004EE49B0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-random/Pods-random-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4448682E20C388310030BE26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4448688820DA7F410030BE26 /* MoviesCollectionViewController.m in Sources */,
+				4448688B20DA809B0030BE26 /* MoviesCollectionViewCell.m in Sources */,
+				4448688220DA74D50030BE26 /* DetailViewController.m in Sources */,
+				4448685A20C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m in Sources */,
 				4448684D20C38CF30030BE26 /* NowPlayingViewController.m in Sources */,
 				4448684520C388320030BE26 /* main.m in Sources */,
 				4448683720C388310030BE26 /* AppDelegate.m in Sources */,
@@ -289,6 +399,7 @@
 		};
 		4448684920C388320030BE26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31725DABFCA8F0538D0DBED5 /* Pods-random.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +416,7 @@
 		};
 		4448684A20C388320030BE26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F939F922C556165CC77479 /* Pods-random.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

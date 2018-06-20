@@ -1,42 +1,39 @@
 //
-//  NowPlayingViewController.m
+//  MoviesCollectionViewController.m
 //  random
 //
-//  Created by jsood on 6/2/18.
+//  Created by jsood on 6/20/18.
 //  Copyright © 2018 Jigyasaa Sood. All rights reserved.
 //
 
-#import "DetailViewController.h"
-#import "NowPlayingViewController.h"
-#import "NowPlayingMovieTableViewCell.h"
+#import "MoviesCollectionViewController.h"
+#import "MoviesCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-
-@interface NowPlayingViewController ()
+@interface MoviesCollectionViewController ()
 
 @property (nonatomic, strong) NSArray * movies; //like an instance variable
-@property (nonatomic, strong) UIRefreshControl * refreshControl;
+
 
 @end
 
-@implementation NowPlayingViewController
-
-
-NSDictionary * movies;
+@implementation MoviesCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    // Do any additional setup after loading the view.
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     
     [self fetchMovies];
     
-    self.refreshControl = [[UIRefreshControl alloc]init];
-    [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
+     UICollectionViewFlowLayout * layout = self.collectionView.collectionViewLayout;
     
-    [self.tableView addSubview:self.refreshControl]; //attach the refreshcontrol to the tableView
+    CGFloat postersPerLine = 2;
+    CGFloat itemWidth = self.collectionView.frame.size.width / postersPerLine;
+    CGFloat itemHeight = itemWidth * 1.5;
    
-    
+    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
     
 }
 
@@ -69,49 +66,34 @@ NSDictionary * movies;
                                                         
                                                     }
                                                     
-                                                    [self.tableView reloadData];
+                                                    [self.collectionView reloadData];
                                                     
                                                 }
-                                                [self.refreshControl endRefreshing];
+                                                //[self.refreshControl endRefreshing];
                                             }];
     
     [task resume];
 }
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    MoviesCollectionViewCell * cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"MoviesCollectionViewCell" forIndexPath:indexPath];
     
-    NowPlayingMovieTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"NowPlayingMovieTableViewCell" forIndexPath:indexPath];
-    
-    NSDictionary * movie = self.movies[indexPath.row];
-    cell.titleLabel.text = movie[@"title"];
-    cell.overviewLabel.text = movie[@"overview"];
+    NSDictionary * movie = self.movies[indexPath.item];
     
     NSString * baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString * posterURLString = movie[@"poster_path"];
     NSString * posterURL = [baseURLString stringByAppendingString:posterURLString];
     NSURL * posterPathURL = [NSURL URLWithString:posterURL]; //checks if it's a valid URL
     
-    [cell.posterImageView setImageWithURL:posterPathURL];
+    [cell.movieImageView setImageWithURL:posterPathURL];
     
     return cell;
     
+    
 }
 
-
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.movies.count;
-   
- }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    UITableViewCell * cell = sender;
-    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-    NSDictionary * movie = self.movies[indexPath.row];
-    
-    DetailViewController * detailView = [segue destinationViewController];
-    detailView.movie = movie;
-   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -120,14 +102,13 @@ NSDictionary * movies;
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

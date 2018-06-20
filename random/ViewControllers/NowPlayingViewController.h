@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NowPlayingViewController.h"
 
-@interface NowPlayingViewController : UIViewController
+@interface NowPlayingViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
