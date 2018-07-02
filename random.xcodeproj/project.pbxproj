@@ -17,6 +17,8 @@
 		4448688220DA74D50030BE26 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688120DA74D50030BE26 /* DetailViewController.m */; };
 		4448688820DA7F410030BE26 /* MoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688720DA7F410030BE26 /* MoviesCollectionViewController.m */; };
 		4448688B20DA809B0030BE26 /* MoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */; };
+		447430A620E1C0C100FA6E1B /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 447430A520E1C0C100FA6E1B /* Movie.m */; };
+		447430F520E98FB900FA6E1B /* MoviesAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 447430F420E98FB900FA6E1B /* MoviesAPIManager.m */; };
 		BBFDB3426622BB868C69D9FB /* libPods-random.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DF464673AD1676B0B93998 /* libPods-random.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,10 @@
 		4448688720DA7F410030BE26 /* MoviesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewController.m; sourceTree = "<group>"; };
 		4448688920DA809B0030BE26 /* MoviesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesCollectionViewCell.h; sourceTree = "<group>"; };
 		4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewCell.m; sourceTree = "<group>"; };
+		447430A420E1C0C100FA6E1B /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		447430A520E1C0C100FA6E1B /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		447430F320E98FB900FA6E1B /* MoviesAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesAPIManager.h; sourceTree = "<group>"; };
+		447430F420E98FB900FA6E1B /* MoviesAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesAPIManager.m; sourceTree = "<group>"; };
 		B3F939F922C556165CC77479 /* Pods-random.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random.release.xcconfig"; path = "Pods/Target Support Files/Pods-random/Pods-random.release.xcconfig"; sourceTree = "<group>"; };
 		D6DF464673AD1676B0B93998 /* libPods-random.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-random.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +83,7 @@
 		4448683420C388310030BE26 /* random */ = {
 			isa = PBXGroup;
 			children = (
+				447430A720E1C0CA00FA6E1B /* Models */,
 				4448684F20C3B6210030BE26 /* ViewCells */,
 				4448684E20C38D210030BE26 /* ViewControllers */,
 				4448683520C388310030BE26 /* AppDelegate.h */,
@@ -86,6 +93,8 @@
 				4448684020C388320030BE26 /* LaunchScreen.storyboard */,
 				4448684320C388320030BE26 /* Info.plist */,
 				4448684420C388320030BE26 /* main.m */,
+				447430F320E98FB900FA6E1B /* MoviesAPIManager.h */,
+				447430F420E98FB900FA6E1B /* MoviesAPIManager.m */,
 			);
 			path = random;
 			sourceTree = "<group>";
@@ -112,6 +121,15 @@
 				4448688A20DA809B0030BE26 /* MoviesCollectionViewCell.m */,
 			);
 			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		447430A720E1C0CA00FA6E1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				447430A420E1C0C100FA6E1B /* Movie.h */,
+				447430A520E1C0C100FA6E1B /* Movie.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9E5B47865892772DB7A12BDF /* Frameworks */ = {
@@ -257,7 +275,9 @@
 			files = (
 				4448688820DA7F410030BE26 /* MoviesCollectionViewController.m in Sources */,
 				4448688B20DA809B0030BE26 /* MoviesCollectionViewCell.m in Sources */,
+				447430A620E1C0C100FA6E1B /* Movie.m in Sources */,
 				4448688220DA74D50030BE26 /* DetailViewController.m in Sources */,
+				447430F520E98FB900FA6E1B /* MoviesAPIManager.m in Sources */,
 				4448685A20C3DFC70030BE26 /* NowPlayingMovieTableViewCell.m in Sources */,
 				4448684D20C38CF30030BE26 /* NowPlayingViewController.m in Sources */,
 				4448684520C388320030BE26 /* main.m in Sources */,
